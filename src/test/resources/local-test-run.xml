@@ -9,7 +9,13 @@
 
     <test name="Local Test Run">
         <classes>
-            <class name="com.digitalbank.tests">
+            <class name="com.digitalbank.automation.tests.ui.authentication.VerifyLoginPageUI">
+                <methods>
+                    <include name="testValidLogin"/>
+                    <include name="testInvalidLogin"/>
+                </methods>
+            </class>
+            <class name="com.digitalbank.automation.tests.ui.authentication.VerifyLoginPageBehavior">
                 <methods>
                     <include name="testValidLogin"/>
                     <include name="testInvalidLogin"/>

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="DigitalBank Test Suite" parallel="false">
+    <test name="UI Tests">
+        <classes>
+            <class name="com.digitalbank.automation.tests.ui.authentication.VerifyLoginPageUI"/>
+            <class name="com.digitalbank.automation.tests.ui.authentication.VerifyLoginPageBehavior"/>
+            <class name="com.digitalbank.automation.tests.ui.registration.VerifySignUpPageUI"/>
+            <class name="com.digitalbank.automation.tests.ui.registration.VerifySignUpPageBehavior"/>
+        </classes>
+    </test>
+</suite>

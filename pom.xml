@@ -9,9 +9,155 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- Compiler settings -->
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Test Execution defaults -->
+        <suite>src/test/resources/testng.xml</suite> <!-- optional fallback -->
+        <testGroups>all</testGroups>
+        <browser>chrome</browser>
+        <platform>macos</platform>
+        <browserConfigProfile>headless</browserConfigProfile>
+        <timeout>30</timeout>
+        <appUrl>http://localhost:8080/digitalbank</appUrl>
     </properties>
-    
+
+    <dependencies>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.19.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>5.5.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.7.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>com.github.javafaker</groupId>
+        <artifactId>javafaker</artifactId>
+        <version>1.0.2</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-csv</artifactId>
+        <version>1.10.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-csv</artifactId>
+        <version>2.15.2</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.mysql</groupId>
+        <artifactId>mysql-connector-j</artifactId>
+        <version>8.3.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.browserstack</groupId>
+        <artifactId>browserstack-local-java</artifactId>
+        <version>1.0.9</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.32</version>
+        <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>2.0.10</version>
+    </dependency>
+
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.4.12</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>5.5.1</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>4.12.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-urlconnection</artifactId>
+        <version>4.12.0</version>
+    </dependency>
+
+        <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.12.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.13.4.2</version>
+    </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>23</source>
+                    <target>23</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suite}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <groups>${testGroups}</groups>
+                    <systemPropertyVariables>
+                        <browser>${browser}</browser>
+                        <platform>${platform}</platform>
+                        <browserConfigProfile>${browserConfigProfile}</browserConfigProfile>
+                        <timeout>${timeout}</timeout>
+                        <appUrl>${appUrl}</appUrl>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
