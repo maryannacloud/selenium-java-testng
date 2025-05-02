@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DigitalBank Regression Suite" parallel="methods" thread-count="8">
+
+    <parameter name="browser" value="${browser}"/>
+    <parameter name="platform" value="${platform}"/>
+    <parameter name="browserConfigProfile" value="${browserConfigProfile}"/>
+    <parameter name="timeout" value="${timeout}"/>
+    <parameter name="appUrl" value="${appUrl}"/>
+
+    <test name="UI Tests">
+        <packages>
+            <package name="com.digitalbank.tests.ui"/>
+        </packages>
+    </test>
+
+    <test name="API Tests">
+        <packages>
+            <package name="com.digitalbank.tests.api"/>
+        </packages>
+    </test>
+
+    <test name="Database Tests">
+        <packages>
+            <package name="com.digitalbank.tests.db"/>
+        </packages>
+    </test>
+
+</suite>

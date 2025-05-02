@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Local Test Suite" parallel="methods" thread-count="2">
+
+    <parameter name="browser" value="${browser}"/>
+    <parameter name="platform" value="macos"/>
+    <parameter name="browserConfigProfile" value="${browserConfigProfile}"/>
+    <parameter name="timeout" value="30"/>
+    <parameter name="appUrl" value="${appUrl}"/>
+
+    <test name="Local Test Run">
+        <classes>
+            <class name="com.digitalbank.tests">
+                <methods>
+                    <include name="testValidLogin"/>
+                    <include name="testInvalidLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
