@@ -1,0 +1,7 @@
+baseUrl: "http://18.118.14.155:8080/bank/login"
+browser: "chrome"
+headless: false
+db:
+  url: "jdbc:mysql://18.118.14.155:3306/digitalbank"
+  username: "digitaluser"
+  password: "Demo123!"
