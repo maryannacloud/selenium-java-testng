@@ -9,7 +9,7 @@ public class DBUtils {
     private static Connection connection;
 
     /**
-     * Establishes a database connection using values from db-config.yaml.
+     * Establishes a database connection using values from general-configs.yaml.
      */
     public static void connect() throws SQLException {
         if (connection == null || connection.isClosed()) {

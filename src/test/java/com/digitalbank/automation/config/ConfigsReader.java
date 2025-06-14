@@ -14,10 +14,10 @@ public class ConfigsReader {
 
     public static ConfigurationsPOJO getConfig() {
         if (config == null) {
-            LOGGER.info("Loading configuration from db-config.yaml");
+            LOGGER.info("Loading configuration from general-configs.yaml");
             try (InputStream input = ConfigsReader.class
                     .getClassLoader()
-                    .getResourceAsStream("db-config.yaml")) {
+                    .getResourceAsStream("general-configs.yaml")) {
 
                 ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
                 config = mapper.readValue(input, ConfigurationsPOJO.class);
