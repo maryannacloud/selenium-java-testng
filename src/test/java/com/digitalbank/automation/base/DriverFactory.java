@@ -16,7 +16,7 @@ import java.time.Duration;
  * Supports multiple browsers (Chrome, Firefox, Edge) and headless execution.
  *
  * <p>This class is responsible for initializing, providing, and quitting WebDriver instances.
- * It uses values from {@code config.yaml} via {@link ConfigsReader}, but also allows runtime overrides
+ * It uses values from {@code db-config.yaml} via {@link ConfigsReader}, but also allows runtime overrides
  * via method parameters (useful for TestNG parameterization or CI/CD pipelines).</p>
  *
  * <p>Example usage:
