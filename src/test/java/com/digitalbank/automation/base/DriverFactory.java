@@ -61,7 +61,8 @@ public class DriverFactory {
                 break;
         }
 
-        driverInstance.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        int implicit = ConfigsReader.getConfig().timeouts.implicit;
+        driverInstance.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicit));
         driverInstance.manage().window().maximize();
         driver.set(driverInstance);
     }
