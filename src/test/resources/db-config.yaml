@@ -2,6 +2,12 @@ baseUrl: "http://18.118.14.155:8080/bank/login"
 host: "local"
 browser: "chrome"
 headless: false
+
+timeouts:
+  implicit: 10
+  pageLoad: 30
+  script: 20
+
 db:
   url: "jdbc:mysql://18.118.14.155:3306/digitalbank"
   username: "digitaluser"
