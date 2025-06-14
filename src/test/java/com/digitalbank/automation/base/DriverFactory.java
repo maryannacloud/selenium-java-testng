@@ -16,7 +16,7 @@ import java.time.Duration;
  * Supports multiple browsers (Chrome, Firefox, Edge) and headless execution.
  *
  * <p>This class is responsible for initializing, providing, and quitting WebDriver instances.
- * It uses values from {@code config.yaml} via {@link ConfigsReader}, but also allows runtime overrides
+ * It uses values from {@code general-configs.yaml} via {@link ConfigsReader}, but also allows runtime overrides
  * via method parameters (useful for TestNG parameterization or CI/CD pipelines).</p>
  *
  * <p>Example usage:
@@ -61,7 +61,8 @@ public class DriverFactory {
                 break;
         }
 
-        driverInstance.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        int implicit = ConfigsReader.getConfig().timeouts.implicit;
+        driverInstance.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicit));
         driverInstance.manage().window().maximize();
         driver.set(driverInstance);
     }
