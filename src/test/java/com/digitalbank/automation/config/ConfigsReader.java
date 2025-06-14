@@ -16,8 +16,8 @@ public class ConfigsReader {
         if (config == null) {
             LOGGER.info("Loading configuration from general-configs.yaml");
             try (InputStream input = ConfigsReader.class
-                                        .getClassLoader()
-                                        .getResourceAsStream("general-configs.yaml")) {
+                                                  .getClassLoader()
+                                                  .getResourceAsStream("general-configs.yaml")) {
 
                 ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
                 config = mapper.readValue(input, ConfigurationsPOJO.class);
