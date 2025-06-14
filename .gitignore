@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Do not commit secrets
+.env
+src/test/resources/config.yaml
