@@ -15,6 +15,3 @@ A robust, extensible Test Automation Framework for testing the Digital Bank web 
 - ✅ Designed for CI/CD with dynamic suite configuration
 
 ---
-
-## 📁 Project Structure
-
