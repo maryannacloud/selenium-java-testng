@@ -11,26 +11,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
-/**
- * Factory class for managing WebDriver instances using ThreadLocal.
- * Supports multiple browsers (Chrome, Firefox, Edge) and headless execution.
- *
- * <p>This class is responsible for initializing, providing, and quitting WebDriver instances.
- * It uses values from {@code general-configs.yaml} via {@link ConfigsReader}, but also allows runtime overrides
- * via method parameters (useful for TestNG parameterization or CI/CD pipelines).</p>
- *
- * <p>Example usage:
- * <pre>{@code
- *     DriverFactory.initDriver("chrome", true);
- *     WebDriver driver = DriverFactory.getDriver();
- *     driver.get("https://example.com");
- * }</pre>
- * </p>
- *
- *  @author Maryna Nesterenko
- *  @since 2025-05-15
- */
-
 public class DriverFactory {
 
     public static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
