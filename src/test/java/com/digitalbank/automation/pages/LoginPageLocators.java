@@ -2,6 +2,7 @@ package com.digitalbank.automation.pages;
 
 import com.digitalbank.automation.utils.Locator;
 import com.digitalbank.automation.utils.LocatorType;
+import org.openqa.selenium.By;
 
 public class LoginPageLocators {
 
