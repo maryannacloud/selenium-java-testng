@@ -9,28 +9,28 @@ public class LoginPage extends BasePage {
     }
 
     public void enterUsername(String username) {
-        WebElement usernameField = driver.findElement(LoginPageLocators.USERNAME_TITLE);
+        WebElement usernameField = driver.findElement();
         usernameField.clear();
         usernameField.sendKeys(username);
     }
 
     public void enterPassword(String password) {
-        WebElement passwordField = driver.findElement(LoginPageLocators.PASSWORD_TITLE);
+        WebElement passwordField = driver.findElement(;
         passwordField.clear();
         passwordField.sendKeys(password);
     }
 
     public void clickLogin() {
-        WebElement loginButton = driver.findElement(LoginPageLocators.LOGIN_BUTTON);
+        WebElement loginButton = driver.findElement();
         loginButton.click();
     }
 
     public String getErrorMessage() {
-        WebElement errorMessage = driver.findElement(LoginPageLocators.ERROR_MESSAGE);
+        WebElement errorMessage = driver.findElement();
         return errorMessage.getText();
     }
 
     public boolean isLoginPageDisplayed() {
-        return driver.findElement(LoginPageLocators.USERNAME_TITLE).isDisplayed();
+        return driver.findElement().isDisplayed();
     }
 }
