@@ -1,10 +1,7 @@
 package com.digitalbank.automation.pages;
 
-import com.digitalbank.automation.base.DriverFactory;
-import com.digitalbank.automation.utils.WaitUtils;
-import org.openqa.selenium.By;
+import com.digitalbank.automation.utils.DriverFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public abstract class BasePage {
 

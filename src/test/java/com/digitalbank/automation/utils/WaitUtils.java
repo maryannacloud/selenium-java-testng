@@ -1,6 +1,5 @@
 package com.digitalbank.automation.utils;
 
-import com.digitalbank.automation.base.DriverFactory;
 import com.digitalbank.automation.config.ConfigsReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
