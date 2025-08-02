@@ -6,31 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 @Getter
-public class Locator implements WebLocator {
+public class Locator {
 
     private final String selector;
-    private final LocatorType type;
     private final String name;
-    private final int defaultTimeout;
 
-    public Locator(String selector, LocatorType type, String name, int timeout) {
+    public Locator(String selector, String name) {
         this.selector = selector;
-        this.type = type;
         this.name = name;
         this.defaultTimeout = timeout;
-    }
-
-    public By toSeleniumLocator() {
-        return switch (type) {
-            case CSS -> By.cssSelector(selector);
-            case XPATH -> By.xpath(selector);
-            case ID -> By.id(selector);
-        };
-    }
-
-    @Override
-    public WebElement findElement(WebDriver driver) {
-        return driver.findElement(toSeleniumLocator());
     }
 }
 

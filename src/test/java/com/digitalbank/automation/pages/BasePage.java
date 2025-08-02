@@ -13,26 +13,4 @@ public abstract class BasePage {
     public BasePage () {
         this.driver = DriverFactory.getDriver();
     }
-
-    protected void click(By locator) {
-        WaitUtils.waitForClickability(locator).click();
-    }
-
-    protected void type(By locator, String text) {
-        WebElement element = WaitUtils.waitForVisibility(locator);
-        element.clear();
-        element.sendKeys(text);
-    }
-
-    protected String getText(By locator) {
-        return WaitUtils.waitForVisibility(locator).getText();
-    }
-
-    protected boolean isVisible(By locator) {
-        try {
-            return WaitUtils.waitForVisibility(locator).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
 }
