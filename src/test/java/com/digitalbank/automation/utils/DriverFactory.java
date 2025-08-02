@@ -1,4 +1,4 @@
-package com.digitalbank.automation.base;
+package com.digitalbank.automation.utils;
 
 import com.digitalbank.automation.config.ConfigsReader;
 import org.openqa.selenium.WebDriver;

@@ -4,8 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5903e446-d721-4ac7-87d3-22d65ca2b342" name="Changes" comment="Adding Maven Dependency for YAML support with Jackson">
+    <list default="true" id="5903e446-d721-4ac7-87d3-22d65ca2b342" name="Changes" comment="Cleaning up Locator instance usages">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/DefaultUiElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/DriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/ElementFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/SeleniumDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/SeleniumElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/UiDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/UiElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/base/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/pages/LoginPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/pages/LoginPageLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/tests/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/tests/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/DBUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/Locator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/Locator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/LocatorType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/WaitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/WaitUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalbank/automation/utils/WebLocator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dependency-update" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,17 +62,19 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2uYl9WrqcNydwAtNmizOj2TOUfv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.selenium-java-testng [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "locator-refactoring",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,12 +102,86 @@
       <option name="project" value="LOCAL" />
       <updated>1747363812455</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cleaning up some files and adding custom wrapper for locator object">
+      <option name="closed" value="true" />
+      <created>1750967596721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750967596721</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding boilerplate code with Lombok annotations and experimenting with WebElement Interface">
+      <option name="closed" value="true" />
+      <created>1751088955923</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751088955923</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adding CSS Locators for LoginPage">
+      <option name="closed" value="true" />
+      <created>1751503275357</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751503275357</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Working on Login Test Class">
+      <option name="closed" value="true" />
+      <created>1751504645006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751504645006</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding apache-commons dependency">
+      <option name="closed" value="true" />
+      <created>1754145779359</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754145779359</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updates to wrapper class Locator">
+      <option name="closed" value="true" />
+      <created>1754145938453</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754145938453</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cleaning up Locator instance usages">
+      <option name="closed" value="true" />
+      <created>1754146082758</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754146082758</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configs" />
     <MESSAGE value="Adding Maven Dependency for YAML support with Jackson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Maven Dependency for YAML support with Jackson" />
+    <MESSAGE value="Cleaning up some files and adding custom wrapper for locator object" />
+    <MESSAGE value="Adding boilerplate code with Lombok annotations and experimenting with WebElement Interface" />
+    <MESSAGE value="Adding CSS Locators for LoginPage" />
+    <MESSAGE value="Working on Login Test Class" />
+    <MESSAGE value="Adding apache-commons dependency" />
+    <MESSAGE value="Updates to wrapper class Locator" />
+    <MESSAGE value="Cleaning up Locator instance usages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up Locator instance usages" />
   </component>
 </project>
